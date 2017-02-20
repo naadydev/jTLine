@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="../css/style.css"> <!-- Resource style -->
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+
+    <script src="../js/jquery-2.1.4.js"></script>
+    <script src="../js/jquery.mobile.custom.min.js"></script>
+    <script src="../js/jtline.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var contentText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
+            
+            // dataRoot : '/'
+            var myMappedObject = [
+                  {
+                      "isSelected": "true",
+                      "taskTitle": "My First Point 1",
+                      "taskSubTitle": "January 16th, 2014",
+                      "assignDate": "16/01/2014",
+                      "taskShortDate": "16 Jan",
+                      "taskDetails": "hi <span style=\"color:red\">my html content</span> other text"
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 2",
+                      "taskSubTitle": "February 28th, 2014",
+                      "assignDate": "28/02/2014",
+                      "taskShortDate": "28 Feb",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 3",
+                      "taskSubTitle": "March 20th, 2014",
+                      "assignDate": "20/04/2014",
+                      "taskShortDate": "20 Apr",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 4",
+                      "taskSubTitle": "May 20th, 2014",
+                      "assignDate": "20/05/2014",
+                      "taskShortDate": "20 May",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 5",
+                      "taskSubTitle": "July 9th, 2014",
+                      "assignDate": "09/07/2014",
+                      "taskShortDate": "09 July",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 6",
+                      "taskSubTitle": "August 30th, 2014",
+                      "assignDate": "30/08/2014",
+                      "taskShortDate": "30 Aug",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 7",
+                      "taskSubTitle": "September 15th, 2014",
+                      "assignDate": "15/09/2014",
+                      "taskShortDate": "15 Sep",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 8",
+                      "taskSubTitle": "November 1st, 2014",
+                      "assignDate": "01/11/2014",
+                      "taskShortDate": "01 Nov",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 9",
+                      "taskSubTitle": "December 10th, 2014",
+                      "assignDate": "10/12/2014",
+                      "taskShortDate": "10 Dec",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 10",
+                      "taskSubTitle": "January 19th, 2015",
+                      "assignDate": "19/01/2015",
+                      "taskShortDate": "29 Jan",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 11",
+                      "taskSubTitle": "March 3rd, 2015",
+                      "assignDate": "03/03/2015",
+                      "taskShortDate": "3 Mar",
+                      "taskDetails": contentText
+                  }
+            ];
+
+            // dataRoot : 'myData'
+            var myMappedObjectA = {
+                attrA: "",
+                atrrB: "",
+                "myData": [{
+                    "isSelected": "",
+                    "taskTitle": "My Point 7",
+                    "taskSubTitle": "September 15th, 2014",
+                    "assignDate": "15/09/2014",
+                    "taskShortDate": "15 Sep",
+                    "taskDetails": contentText
+                },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 8",
+                      "taskSubTitle": "November 1st, 2014",
+                      "assignDate": "01/11/2014",
+                      "taskShortDate": "01 Nov",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 9",
+                      "taskSubTitle": "December 10th, 2014",
+                      "assignDate": "10/12/2014",
+                      "taskShortDate": "10 Dec",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 10",
+                      "taskSubTitle": "January 19th, 2015",
+                      "assignDate": "19/01/2015",
+                      "taskShortDate": "29 Jan",
+                      "taskDetails": contentText
+                  }]
+            };
+
+            // dataRoot : 'parent.ch2'
+            var myMappedObjectB = {
+                attrA: "",
+                atrrB: "",
+                "parent": {
+                    "ch1": {},
+                    "ch2": [{
+                        "isSelected": "",
+                        "taskTitle": "My Point 7",
+                        "taskSubTitle": "September 15th, 2014",
+                        "assignDate": "15/09/2014",
+                        "taskShortDate": "15 Sep",
+                        "taskDetails": contentText
+                    },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 8",
+                      "taskSubTitle": "November 1st, 2014",
+                      "assignDate": "01/11/2014",
+                      "taskShortDate": "01 Nov",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 9",
+                      "taskSubTitle": "December 10th, 2014",
+                      "assignDate": "10/12/2014",
+                      "taskShortDate": "10 Dec",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 10",
+                      "taskSubTitle": "January 19th, 2015",
+                      "assignDate": "19/01/2015",
+                      "taskShortDate": "29 Jan",
+                      "taskDetails": contentText
+                  }]
+                }
+            };
+
+            var jtLine = $('.myjtline').jTLine({
+                callType: 'jsonObject',
+                structureObj: myMappedObject,
+                map: {
+                    "dataRoot": "/",
+                    "title": "taskTitle",
+                    "subTitle": "taskSubTitle",
+                    "dateValue": "assignDate",
+                    "pointCnt": "taskShortDate",
+                    "bodyCnt": "taskDetails"
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="myjtline">
+    </div>
+</body>
+</html>

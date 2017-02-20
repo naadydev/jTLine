@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="../css/style.css"> <!-- Resource style -->
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+
+    <script src="../js/jquery-2.1.4.js"></script>
+    <script src="../js/jquery.mobile.custom.min.js"></script>
+    <script src="../js/jtline.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/demo.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var contentText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.';
+            var myjSonObject = {
+                "args": {
+
+                },
+                "dataArray": [
+                  {
+                      "isSelected": "true",
+                      "pName": "Nady",
+                      "pImge": "../pics/nady.jpg",
+                      "title": "Point 1",
+                      "subTitle": "JavaScript Design Patterns",
+                      "dateValue": "10:12",
+                      "pointCnt": "10:12 AM",
+                      "bodyCnt": 'Design patterns are advanced object-oriented solutions to commonly occurring software problems.  Patterns are about reusable designs and interactions of objects.  Each pattern has a name and becomes part of a vocabulary when discussing complex design solutions.'
+                  },
+                  {
+                      "isSelected": "",
+                      "pName": "Hazem",
+                      "pImge": "../pics/hazem.jpg",
+                      "title": "Point 2",
+                      "subTitle": "subTitle 2",
+                      "dateValue": "13:12",
+                      "pointCnt": "01:12 PM",
+                      "bodyCnt": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "pName": "Ragb",
+                      "pImge": "../pics/ragb.jpg",
+                      "title": "Point 3",
+                      "subTitle": "subTitle 3",
+                      "dateValue": "17:30",
+                      "pointCnt": "05:30 PM",
+                      "bodyCnt": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "pName": "Doma",
+                      "pImge": "../pics/doma.jpg",
+                      "title": "Point 4",
+                      "subTitle": "subTitle 4",
+                      "dateValue": "22:00",
+                      "pointCnt": "10:00 PM",
+                      "bodyCnt": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "pName": "Doma",
+                      "pImge": "../pics/doma.jpg",
+                      "title": "Point 5",
+                      "subTitle": "subTitle 5",
+                      "dateValue": "23:00",
+                      "pointCnt": "11:00 PM",
+                      "bodyCnt": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "pName": "Doma",
+                      "pImge": "../pics/doma.jpg",
+                      "title": "Point 6",
+                      "subTitle": "subTitle 6",
+                      "dateValue": "24:00",
+                      "pointCnt": "12:00 AM",
+                      "bodyCnt": contentText
+                  }
+                ]
+            }
+
+            var jtLine = $('.myjtline').jTLine({
+                callType: 'jsonObject',
+                structureObj: myjSonObject,
+                formatTitle: function (title, obj) {
+                    var str = '<div class="snip1566"><img src="' + obj.pImge + '" alt="sq-sample20" /><span><i class="fa fa-star"></i></span><a href="#"></a></div> ' + obj.pName + '';
+                    return str;
+                },
+                formatSubTitle: function (subTitle) {
+                    return '<em><span style="color:blue">' + subTitle + '</span></em>';
+                },
+                formatBodyContent: function (bodyCnt) {
+                    return '<p><span style="color:#6a6a6a">' + bodyCnt + '</span></p>';
+                }
+            });
+
+            /* Demo purposes only */
+            $(".hover").mouseleave(
+              function () {
+                  $(this).removeClass("hover");
+              }
+            );
+        });
+    </script>
+</head>
+<body>
+    <div class="myjtline">
+    </div>
+
+    <br />
+
+</body>
+</html>
